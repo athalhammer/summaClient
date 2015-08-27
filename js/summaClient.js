@@ -1,5 +1,6 @@
 function summa(uri, topK, language, fixedProperty, id, service) {
-
+	$("#" + id).after("<div id=" + id + "_loading><img src='css/images/712.GIF'></div>");
+	$("#" + id + "_loading").hide();
 	$("#" + id).hide();
 	$.ajaxSetup({
 		accepts: {"json" : "application/rdf+json, application/json, text/javascript" },
@@ -18,10 +19,10 @@ function summa(uri, topK, language, fixedProperty, id, service) {
 		dataType: "json",
 		url: url,
         beforeSend: function() {
-        	// show loading bar
+        	$("#" + id + "_loading").show();
         },
         complete: function() {
-        	// hide loading bar
+        	$("#" + id + "_loading").hide();
         },
 		success:
 		function (data) {

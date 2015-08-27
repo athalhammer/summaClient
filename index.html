@@ -16,17 +16,11 @@ padding: 5px 5px 5px 5px;
 <script src="js/summaClient.js"></script>
 <script>
 $(document).ready(function() {
-	summa("http://dbpedia.org/resource/Marie_Curie", 10, "en", null, "summary1", "http://km.aifb.kit.edu/summaPlus/summarum");
-	summa("http://dbpedia.org/resource/Marie_Curie", 10, "en", null, "summary2", "http://localhost:8080/summaServer/sum");
-	summa("http://dbpedia.org/resource/Marie_Curie", 5, "fr", null, "summary3", "http://localhost:8080/summaServer/sum");
-	summa("http://dbpedia.org/resource/Marie_Curie", 10, "en", "http://dbpedia.org/ontology/spouse,http://dbpedia.org/ontology/knownFor", "summary4", "http://km.aifb.kit.edu/summa/summarum");
+	summa("http://dbpedia.org/resource/Marie_Curie", 10, "en", "http://dbpedia.org/ontology/spouse,http://dbpedia.org/ontology/knownFor", "summary-element", "http://km.aifb.kit.edu/summa/summarum");
 });
 </script>
 </head>
 <body>
-<div class="sum" id="summary1"></div>
-<div class="sum" id="summary2"></div>
-<div class="sum" id="summary3"></div>
-<div class="sum" id="summary4"></div>
+<div class="sum" id="summary-element"></div>
 </body>
 </html>

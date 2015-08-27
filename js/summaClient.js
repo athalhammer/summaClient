@@ -79,7 +79,7 @@ function summa(uri, topK, language, fixedProperty, id, service) {
 }
 
 
-function qsum(topK, lang, fixedproperty, service) {
+function qSum(topK, lang, fixedproperty, service) {
 	var clicked = false;
 	$("[its-ta-ident-ref]").mouseover(function() {
 		var letter = String.fromCharCode(65 + Math.floor(Math.random() * 26));

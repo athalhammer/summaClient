@@ -16,20 +16,25 @@ width:30%;border: 1px solid; padding: 5px 5px 5px 5px;background:white;
 $(document).ready(function() {
 
 	// define which element should contain a specific summary
+	// parameters: entity, topK, language, fixed properties, (html) DIV-id, service
 	summa("http://dbpedia.org/resource/Quentin_Tarantino", 10, "en", "http://dbpedia.org/ontology/director,http://dbpedia.org/ontology/knownFor", "pf-summary", "http://km.aifb.kit.edu/summa/summarum");
 
 	// inline popups for annotated text
-	qsum(5, "en", null, "http://km.aifb.kit.edu/summa/summarum");
+	// parameters: topK, language, fixed properties, service
+	qSum(5, "en", null, "http://km.aifb.kit.edu/summa/summarum");
 
 });
 </script>
 </head>
 <body>
+<h2>Classic Client</h2>
 
 <!-- here is the element that should contain a specific summary -->
 <div class="sum" id="pf-summary"></div>
 <br>
 <br>
+
+<h2>qSum</h2>
 
 <!-- here is some text that contains annotations with DBpedia -->
 <p>The narrative sequence called<br> "The Gold Watch" of <span its-ta-ident-ref="http://dbpedia.org/resource/Pulp_Fiction"> Pulp Fiction</span> <br>ends with Butch picking up <br>Fabienne with Zed's <span its-ta-ident-ref="http://dbpedia.org/resource/Chopper_(motorcycle)">chopper</span>.</p>

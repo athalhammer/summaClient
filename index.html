@@ -17,7 +17,7 @@ $(document).ready(function() {
 
 	// define which element should contain a specific summary
 	// parameters: entity, topK, language, fixed properties, (html) DIV-id, service
-	summa("http://dbpedia.org/resource/Quentin_Tarantino", 10, "en", "http://dbpedia.org/ontology/director,http://dbpedia.org/ontology/knownFor", "pf-summary", "http://km.aifb.kit.edu/summa/summarum");
+	summa("http://dbpedia.org/resource/Quentin_Tarantino", 5, "en", "http://dbpedia.org/ontology/director,http://dbpedia.org/ontology/knownFor", "pf-summary", "http://km.aifb.kit.edu/summa/summarum");
 
 	// inline popups for annotated text
 	// parameters: topK, language, fixed properties, service
@@ -27,17 +27,35 @@ $(document).ready(function() {
 </script>
 </head>
 <body>
-<h2>Classic Client</h2>
+
+<h1>[ SUMMA client ]</h1>
 
 <!-- here is the element that should contain a specific summary -->
 <div class="sum" id="pf-summary"></div>
 <br>
 <br>
 
-<h2>qSum</h2>
+
+<h1>[ qSum ]</h1>
 
 <!-- here is some text that contains annotations with DBpedia -->
 <p>The narrative sequence called<br> "The Gold Watch" of <span its-ta-ident-ref="http://dbpedia.org/resource/Pulp_Fiction"> Pulp Fiction</span> <br>ends with Butch picking up <br>Fabienne with Zed's <span its-ta-ident-ref="http://dbpedia.org/resource/Chopper_(motorcycle)">chopper</span>.</p>
 
+
+
+
+
+<div style="position:fixed;background:#FFFFFF;bottom:0;float:left;width:100%">
+<h4>Publication</h4>
+<ul style="width:60%">
+<li>Andreas Thalhammer and Steffen Stadtmüller: <a href="http://www.aifb.kit.edu/images/e/e4/Paper_92_final.pdf">SUMMA: A Common API for Linked Data Entity Summaries.</a>.<br>Engineering the Web in the Big Data Era, Lecture Notes in Computer Science 2015, pages 430-446 <a href="http://dx.doi.org/10.1007/978-3-319-19890-3_28">http://dx.doi.org/10.1007/978-3-319-19890-3_28</a></li>
+</ul>
+<h4>Acknowledgements</h4>
+The research leading to these results has received funding from the European Union Seventh Framework Programme (FP7/2007-2013) under grant agreement no. 611346 and by the German Federal Ministry of Education and Research (BMBF) within the Software Campus project "SumOn" (grant no. 01IS12051).<br><br>
+
+<div style="float:left"><a href="http://www.xlime.eu/"><img src="css/images/xlime.jpg" alt="xlime project" height="60"/><br><i>xLiMe Project</i></a></div>
+<div style="float:left;margin-left:20px"><a href="http://www.aifb.kit.edu/web/SumOn"><img src="css/images/sumon.jpg" alt="SumOn project" height="60"/><br><i>SumOn Project</i></a></div>
+<div style="float:left;width:100%"><hr>Contact <a href="http://www.aifb.kit.edu/web/Andreas_Thalhammer/en">Andreas Thalhammer</a>.</div>
+</div>
 </body>
 </html>

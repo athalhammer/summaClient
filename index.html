@@ -4,23 +4,35 @@
 <meta charset="UTF-8">
 <title>SUMMA client example</title>
 <style>
+span {background:#EEEEEE}
 .sum {
-/*
-
-margin-bottom: 30px;*/
-width:40%;float:left;margin-right:5%;margin-bottom:3%;display:none;border: 1px solid;
-padding: 5px 5px 5px 5px;
+width:30%;border: 1px solid; padding: 5px 5px 5px 5px;background:white;
 }
 </style>
 <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script src="js/summaClient.js"></script>
 <script>
 $(document).ready(function() {
-	summa("http://dbpedia.org/resource/Marie_Curie", 10, "en", "http://dbpedia.org/ontology/spouse,http://dbpedia.org/ontology/knownFor", "summary-element", "http://km.aifb.kit.edu/summa/summarum");
+
+	// define which element should contain a specific summary
+	summa("http://dbpedia.org/resource/Quentin_Tarantino", 10, "en", "http://dbpedia.org/ontology/director,http://dbpedia.org/ontology/knownFor", "pf-summary", "http://km.aifb.kit.edu/summa/summarum");
+
+	// inline popups for annotated text
+	qsum(5, "en", null, "http://km.aifb.kit.edu/summa/summarum");
+
 });
 </script>
 </head>
 <body>
-<div class="sum" id="summary-element"></div>
+
+<!-- here is the element that should contain a specific summary -->
+<div class="sum" id="pf-summary"></div>
+<br>
+<br>
+
+<!-- here is some text that contains annotations with DBpedia -->
+<p>The narrative sequence called<br> "The Gold Watch" of <span its-ta-ident-ref="http://dbpedia.org/resource/Pulp_Fiction"> Pulp Fiction</span> <br>ends with Butch picking up <br>Fabienne with Zed's <span its-ta-ident-ref="http://dbpedia.org/resource/Chopper_(motorcycle)">chopper</span>.</p>
+
 </body>
 </html>

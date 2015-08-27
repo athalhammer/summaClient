@@ -19,10 +19,12 @@ function summa(uri, topK, language, fixedProperty, id, service) {
 		dataType: "json",
 		url: url,
         beforeSend: function() {
+		// show loading bar
         	$("#" + id + "_loading").show();
         },
         complete: function() {
-        	$("#" + id + "_loading").hide();
+		// remove loading bar
+        	$("#" + id + "_loading").remove();
         },
 		success:
 		function (data) {
@@ -55,7 +57,7 @@ function summa(uri, topK, language, fixedProperty, id, service) {
 					}
 				}
 			}			
-			$("#" + id).append("<h2>" + label(print.entity) + "</h2><br><table>");
+			$("#" + id).append("<div style='float:right' id='" + id + "_close'>x</div><h2>" + label(print.entity) + "</h2><br><table>");
 			for (i = 0; i < print.statements.length; i++) {
 				if (print.statements[i].subject == print.entity) {
 					$("#" + id).append("<tr><td>" + label(print.statements[i].predicate) + "&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a class=\"" + id + " " + "click\" id=\"" + print.statements[i].object + "\" href=\"#" + print.statements[i].object + "\">" + label(print.statements[i].object) + "</a></td></tr>");
@@ -64,11 +66,41 @@ function summa(uri, topK, language, fixedProperty, id, service) {
 				}
 			}
 			$("#" + id).show();
+			$("#" + id + "_close").click(function() {
+				$("#" + id).remove();
+			});
 			$('.' + id + '.click').click(function() {
 				$("#" + id).empty();
 				$("#" + id).hide();
 				summa(this.id, topK, language, fixedProperty, id, service);
 			});
+		}
+	});
+}
+
+
+function qsum(topK, lang, fixedproperty, service) {
+	var clicked = false;
+	$("[its-ta-ident-ref]").mouseover(function() {
+		var letter = String.fromCharCode(65 + Math.floor(Math.random() * 26));
+		var identifier = letter + Date.now();
+		$("body").append("<div class='sum sum-popup' id='" + identifier + "'></div>");
+		$("#" + identifier).position({
+			my: "left top",
+			at: "right",
+			of:  $(this),
+			collision: "fit"
+		});
+		summa($(this).attr("its-ta-ident-ref"), topK, lang, fixedproperty, identifier, service);
+	});
+	$("[its-ta-ident-ref]").click(function() {
+		clicked = true;
+	});
+	$("[its-ta-ident-ref]").mouseout(function() {
+		if (!clicked) {
+			$(".sum-popup").remove();
+		} else {
+			clicked = false;
 		}
 	});
 }

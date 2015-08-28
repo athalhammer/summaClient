@@ -1,3 +1,17 @@
+/*!
+ * SUMMA Client JavaScript Library
+ * http://people.aifb.kit.edu/ath/summaClient/
+ *
+ * Includes jQuery and jQueryUI
+ * http://jquery.com/
+ * http://jqueryui.com/
+ *
+ * Copyright 2015 Andreas Thalhammer
+ * Released under the MIT license and GPL v3.
+ * https://github.com/athalhammer/summaClient/blob/master/LICENSE
+ *
+ * Date: 2015-08-28
+ */
 function summa(uri, topK, language, fixedProperty, id, service) {
 	$("#" + id).after("<div id=" + id + "_loading><img src='css/images/712.GIF'></div>");
 	$("#" + id + "_loading").hide();

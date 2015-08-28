@@ -16,7 +16,7 @@ Include the following lines in your HTML:
 - **SUMMA client**
 ``` html
 <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
-<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 <script src="http://people.aifb.kit.edu/ath/summaClient/js/summaClient.js"></script>
 <script>
 $(document).ready(function() {
@@ -51,6 +51,8 @@ The narrative sequence called "The Gold Watch" of
 ends with Butch picking up Fabienne with Zed's
 <span its-ta-ident-ref="http://dbpedia.org/resource/Chopper_(motorcycle)">chopper</span>
 ```
+
+As a matter of fact, you can download the *.js files respectively and include it on your own server. 
 
 ## Summaries
 You don't like the summaries of [Summarum](http://km.aifb.kit.edu/summa/summarum)? Build your own ones by implementing the interface Summarizer.java of 

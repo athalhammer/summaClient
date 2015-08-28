@@ -53,5 +53,5 @@ ends with Butch picking up Fabienne with Zed's
 ```
 
 ## Summaries
-You don't like the presented summaries? Build your own ones by implementing the interface Summarizer.java of 
+You don't like the summaries of [Summarum](http://km.aifb.kit.edu/summa/summarum)? Build your own ones by implementing the interface Summarizer.java of 
 https://github.com/athalhammer/summaServer

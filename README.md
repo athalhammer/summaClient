@@ -20,14 +20,13 @@ $(document).ready(function() {
 
 	// define which element should contain a specific summary
 	// parameters: entity, topK, language, fixed properties, (html) DIV-id, service
-	summa("http://dbpedia.org/resource/Quentin_Tarantino", 5, "en", "http://dbpedia.org/ontology/director,http://dbpedia.org/ontology/knownFor", "pf-summary", "http://km.aifb.kit.edu/summa/summarum");
-
-	// inline popups for annotated text
-	// parameters: topK, language, fixed properties, service
-	qSum(5, "en", null, "http://km.aifb.kit.edu/summa/summarum");
-
+	summa("http://dbpedia.org/resource/Quentin_Tarantino", 5, "en",
+		 "http://dbpedia.org/ontology/director,http://dbpedia.org/ontology/knownFor",
+		 "pf-summary", "http://km.aifb.kit.edu/summa/summarum");
 });
 </script>
+<!-- here is the element that should contain a specific summary -->
+<div class="sum" id="pf-summary"></div>
 ```
 
 - **qSum**
@@ -44,5 +43,8 @@ $(document).ready(function() {
 
 });
 </script>
-The narrative sequence called "The Gold Watch" of <span its-ta-ident-ref="http://dbpedia.org/resource/Pulp_Fiction"> Pulp Fiction</span> ends with Butch picking up Fabienne with Zed's <span its-ta-ident-ref="http://dbpedia.org/resource/Chopper_(motorcycle)">chopper</span>
+The narrative sequence called "The Gold Watch" of 
+<span its-ta-ident-ref="http://dbpedia.org/resource/Pulp_Fiction">Pulp Fiction</span>
+ends with Butch picking up Fabienne with Zed's
+<span its-ta-ident-ref="http://dbpedia.org/resource/Chopper_(motorcycle)">chopper</span>
 ```

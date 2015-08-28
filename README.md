@@ -52,7 +52,7 @@ ends with Butch picking up Fabienne with Zed's
 <span its-ta-ident-ref="http://dbpedia.org/resource/Chopper_(motorcycle)">chopper</span>
 ```
 
-As a matter of fact, you can download the *.js files respectively and include it on your own server. 
+As a matter of fact, you can download the above *.js files respectively and include it on your own server.
 
 ## Summaries
 You don't like the summaries of [Summarum](http://km.aifb.kit.edu/summa/summarum)? Build your own ones by implementing the interface Summarizer.java of 

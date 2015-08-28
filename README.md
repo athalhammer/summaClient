@@ -7,6 +7,9 @@ It supports two modes:
 - **SUMMA client** This mode lets you retrieve a summary from a specific entity that will be attached to a predefined DIV element in your page.
 - **qSum** This mode lets you annotate elements with the Internationalization Tag Set (ITS) property "its-ta-ident-ref" inside your HTML and summaries will be displayed as soon as you hover over it.
 
+## Demo
+A demo can be found at [http://people.aifb.kit.edu/ath/summaClient/]
+
 ## Use
 Include the following lines in your HTML:
 

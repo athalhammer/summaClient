@@ -55,7 +55,7 @@ ends with Butch picking up Fabienne with Zed's
 As a matter of fact, you can download the above *.js files respectively and include them on your own server.
 
 ## Summaries
-You don't like the summaries of [Summarum](http://km.aifb.kit.edu/summa)? Build your own ones by implementing the interface `Summarizer.java` of 
+You don't like the summaries of [Summarum](http://km.aifb.kit.edu/summa)? Build your own ones by implementing the interface `edu.kit.aifb.summa.Summarizer` of 
 https://github.com/athalhammer/summaServer.
 
 ## License

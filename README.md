@@ -8,7 +8,11 @@ It supports two modes:
 - **qSum** This mode lets you annotate elements with the Internationalization Tag Set (ITS) property `its-ta-ident-ref` inside your HTML and summaries will be displayed as soon as you hover over the annotated elements.
 
 ## Demo
+<<<<<<< HEAD
 An integrated demo can be found at http://people.aifb.kit.edu/ath/summaClient/
+=======
+An integrated demo can be found at http://athalhammer.github.io/summaClient.
+>>>>>>> f108f2ec4f0b6c32cae32d401accd27b8abcda58
 
 ## Use
 Include the following lines in your HTML:

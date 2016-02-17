@@ -17,7 +17,7 @@ Include the following lines in your HTML:
 ``` html
 <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
 <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-<script src="http://people.aifb.kit.edu/ath/summaClient/js/summaClient.js"></script>
+<script src="http://athalhammer.github.io/summaClient/js/summaClient.js"></script>
 <script>
 $(document).ready(function() {
 
@@ -36,7 +36,7 @@ $(document).ready(function() {
 ``` html
 <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
 <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-<script src="http://people.aifb.kit.edu/ath/summaClient/js/summaClient.js"></script>
+<script src="http://athalhammer.github.io/summaClient/js/summaClient.js"></script>
 <script>
 $(document).ready(function() {
 

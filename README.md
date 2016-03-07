@@ -15,6 +15,7 @@ Include the following lines in your HTML:
 
 - **SUMMA client**
 ``` html
+<link rel="stylesheet" type="text/css" href="http://athalhammer.github.io/summaClient/css/summaClient.css" />
 <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
 <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 <script src="http://athalhammer.github.io/summaClient/js/summaClient.js"></script>
@@ -34,6 +35,7 @@ $(document).ready(function() {
 
 - **qSum**
 ``` html
+<link rel="stylesheet" type="text/css" href="http://athalhammer.github.io/summaClient/css/summaClient.css" />
 <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
 <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script src="http://athalhammer.github.io/summaClient/js/summaClient.js"></script>

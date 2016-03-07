@@ -13,8 +13,8 @@
  * Date: 2015-08-28
  */
 function summa(uri, topK, language, fixedProperty, id, service) {
-	$("#" + id).after("<div id=" + id + "_loading><img src='css/images/712.GIF'></div>");
-	$("#" + id + "_loading").hide();
+	//$("#" + id).after("<div id=" + id + "_loading><img src='css/images/712.GIF'></div>");
+	//$("#" + id + "_loading").hide();
 	$("#" + id).hide();
 	$.ajaxSetup({
 		accepts: {"json" : "application/rdf+json, application/json, text/javascript" },

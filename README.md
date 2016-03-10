@@ -5,7 +5,7 @@ This JavaScript client implementation of the SUMMA API lets you integrate summar
 It supports two modes:
 
 - **SUMMA client** This mode lets you retrieve a summary from a specific entity that will be attached to a predefined DIV element in your page.
-- **qSum** This mode lets you annotate elements with the Internationalization Tag Set (ITS) property `its-ta-ident-ref` inside your HTML and summaries will be displayed as soon as you hover over the annotated elements.
+- **qSUM** This mode lets you annotate elements with the Internationalization Tag Set (ITS) property `its-ta-ident-ref` inside your HTML and summaries will be displayed as soon as you hover over the annotated elements.
 
 ## Demo
 An integrated demo can be found at http://athalhammer.github.io/summaClient.

@@ -33,7 +33,7 @@ $(document).ready(function() {
 <div class="sum" id="pf-summary"></div>
 ```
 
-- **qSum**
+- **qSUM**
 ``` html
 <link rel="stylesheet" type="text/css" href="http://athalhammer.github.io/summaClient/css/summaClient.css" />
 <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
@@ -44,7 +44,7 @@ $(document).ready(function() {
 
 	// inline popups for annotated text
 	// parameters: topK, language, fixed properties, service
-	qSum(5, "en", null, "http://km.aifb.kit.edu/summa/summarum");
+	qSUM(5, "en", null, "http://km.aifb.kit.edu/summa/summarum");
 
 });
 </script>

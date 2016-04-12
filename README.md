@@ -6,7 +6,7 @@ It supports three modes:
 
 - **SUMMA client** This mode lets you retrieve a summary from a specific entity that will be attached to a predefined DIV element in your page.
 - **qSUM** This mode lets you annotate elements with the Internationalization Tag Set (ITS) property `its-ta-ident-ref` inside your HTML and summaries will be displayed as soon as you hover over the annotated elements.
-- **ELES** This mode combines qSUM with DBpedia Spotlight ITS 2.0 annotations.
+- **ELES** This mode combines qSUM with DBpedia Spotlight ITS annotations.
 
 ## Demo
 An integrated demo can be found at http://athalhammer.github.io/summaClient.
@@ -86,7 +86,7 @@ $(select).annotate(settings); $(select).annotate("best");
 As a matter of fact, you can download the above *.js files respectively and include them on your own server.
 
 ## Summaries
-You don't like the summaries of [Summarum](http://km.aifb.kit.edu/summa)? Build your own ones by implementing the interface `edu.kit.aifb.summa.Summarizer` of 
+You don't like the summaries of [LinkSUM](http://km.aifb.kit.edu/services/link)? Build your own ones by implementing the interface `edu.kit.aifb.summa.Summarizer` of 
 https://github.com/athalhammer/summaServer.
 
 ## License

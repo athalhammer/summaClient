@@ -54,6 +54,34 @@ ends with Butch picking up Fabienne with Zed's
 <span its-ta-ident-ref="http://dbpedia.org/resource/Chopper_(motorcycle)">chopper</span>
 ```
 
+- **ELES**
+``` html
+<link rel="stylesheet" type="text/css" href="http://athalhammer.github.io/summaClient/css/summaClient.css" />
+<script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="http://dbpedia-spotlight.github.io/demo/dbpedia-spotlight-0.3.js"></script>
+<script src="http://athalhammer.github.io/summaClient/js/summaClient.js"></script>
+<script>
+$(document).ready(function() {
+// selector on HTML element(s)
+var select = ".annotate";
+
+// as soon as the annotations are ready, start registering mouseover events
+// parameters: topK, language, fixed properties, service
+$(select).bind("DOMSubtreeModified", function() {
+qSUM(5, "en", null, "http://km.aifb.kit.edu/services/link/sum");
+});
+
+// DBpedia Spotlight configuration and annotation
+var settings = { "endpoint" : "http://spotlight.sztaki.hu:2222/rest", "its" : "yes",
+"spotter" : "Default" };
+$(select).annotate(settings); $(select).annotate("best");
+});
+</script>
+<div class="annotate">Angela Merkel is TIME Person of the Year 2015.</div>
+
+```
+
 As a matter of fact, you can download the above *.js files respectively and include them on your own server.
 
 ## Summaries

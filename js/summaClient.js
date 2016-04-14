@@ -53,7 +53,7 @@ function summa(uri, topK, language, fixedProperty, id, service) {
 					return labels = part1["http://www.w3.org/2000/01/rdf-schema#label"][0]["value"];
 				} else {
 					var strArry = uri.split("/");
-					strArry[strArry.length - 1] = strArry[strArry.length - 1].split("_").join(" ");; //only replaces the first?!
+					strArry[strArry.length - 1] = strArry[strArry.length - 1].split("_").join(" ");;
 					return strArry[strArry.length - 1];
 				}
 			}
@@ -63,7 +63,7 @@ function summa(uri, topK, language, fixedProperty, id, service) {
 			};
 
 			var keys = Object.keys(data);		
-			var node = [];
+			//var node = [];
 			
 			for (j = 0; j < topK; j++) {
 				for ( i = 0; i < keys.length; i++) {
@@ -86,7 +86,7 @@ function summa(uri, topK, language, fixedProperty, id, service) {
 					}
 				}
 			}
-			/*
+			/* //same as above in different loops
 			for ( i = 0; i < keys.length; i++) {
 				var types = data[keys[i]]["http://purl.org/voc/summa/statement"];
 				if (types != null) {
@@ -97,7 +97,7 @@ function summa(uri, topK, language, fixedProperty, id, service) {
 				}	
 			}
 			
-			for ( i = 0; i < keys.length; i++) { // TODO re-order loops so I don't have 4 for-loops
+			for ( i = 0; i < keys.length; i++) {
 				for (j = 0; j < topK; j++) {
 					if(data[keys[i]]["@id"] == node[j]) { 
 						var statement = {

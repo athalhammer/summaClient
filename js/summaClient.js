@@ -48,9 +48,13 @@ function summa(uri, topK, language, fixedProperty, id, service) {
 		},
 		success : function(data) {
 			function label(uri) {
-				var part1 = data[uri];
+				for ( k = 0; k < keys.length; k++) {
+					if(data[keys[k]]["@id"] == uri){
+						var part1 = data[keys[k]];
+					}
+				}
 				if (part1 != null) {
-					return labels = part1["http://www.w3.org/2000/01/rdf-schema#label"][0]["value"];
+					return labels = part1["http://www.w3.org/2000/01/rdf-schema#label"][0]["@value"];
 				} else {
 					var strArry = uri.split("/");
 					strArry[strArry.length - 1] = strArry[strArry.length - 1].split("_").join(" ");;
@@ -63,7 +67,6 @@ function summa(uri, topK, language, fixedProperty, id, service) {
 			};
 
 			var keys = Object.keys(data);		
-			//var node = [];
 			
 			for (j = 0; j < topK; j++) {
 				for ( i = 0; i < keys.length; i++) {
@@ -86,53 +89,6 @@ function summa(uri, topK, language, fixedProperty, id, service) {
 					}
 				}
 			}
-			/* //same as above in different loops
-			for ( i = 0; i < keys.length; i++) {
-				var types = data[keys[i]]["http://purl.org/voc/summa/statement"];
-				if (types != null) {
-					print["entity"] = data[keys[i]]["http://purl.org/voc/summa/entity"][0]["@id"];
-					for (j = 0; j < topK; j++) {
-					node[j] = data[keys[i]]["http://purl.org/voc/summa/statement"][j]["@id"];
-					}
-				}	
-			}
-			
-			for ( i = 0; i < keys.length; i++) {
-				for (j = 0; j < topK; j++) {
-					if(data[keys[i]]["@id"] == node[j]) { 
-						var statement = {
-							"subject" : "",
-							"predicate" : "",
-							"object" : ""
-						};
-						statement["subject"] = data[keys[i]]["http://www.w3.org/1999/02/22-rdf-syntax-ns#subject"][0]["@id"];
-						statement["predicate"] = data[keys[i]]["http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate"][0]["@id"];
-						statement["object"] = data[keys[i]]["http://www.w3.org/1999/02/22-rdf-syntax-ns#object"][0]["@id"];
-						console.log(statement);
-						print.statements.push(statement);
-					}
-				}
-			} */
-
-			/*for ( i = 0; i < keys.length; i++) {
-				var types = data[keys[i]]["http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
-				if (types != null) {
-					if (types[0]["value"] == "http://purl.org/voc/summa/Summary") {
-						print["entity"] = data[keys[i]]["http://purl.org/voc/summa/entity"][0]["value"];
-					}
-					if (types[0]["value"] == "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement") {
-						var statement = {
-							"subject" : "",
-							"predicate" : "",
-							"object" : ""
-						};
-						statement["subject"] = data[keys[i]]["http://www.w3.org/1999/02/22-rdf-syntax-ns#subject"][0]["value"];
-						statement["predicate"] = data[keys[i]]["http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate"][0]["value"];
-						statement["object"] = data[keys[i]]["http://www.w3.org/1999/02/22-rdf-syntax-ns#object"][0]["value"];
-						print.statements.push(statement);
-					}
-				}
-			} */
 			
 			$("#" + id).append("<div style='float:right' id='" + id + "_close'>x</div><h2>" + label(print.entity) + "</h2><table></table>");
 			for ( i = 0; i < print.statements.length; i++) {

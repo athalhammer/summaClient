@@ -76,22 +76,24 @@ function summa(uri, topK, language, fixedProperty, id, service) {
 					if (types != null) {
 						print["entity"] = data[keys[i]]["http://purl.org/voc/summa/entity"][0]["@id"];
 						for ( k = 0; k < keys.length; k++) {
-							if (data[keys[k]]["@id"] == data[keys[i]]["http://purl.org/voc/summa/statement"][j]["@id"]) {
-								var statement = {
-									"subject" : "",
-									"predicate" : "",
-									"object" : "",
-									"rankValue" : 0.0
-								};
-								statement["subject"] = data[keys[k]]["http://www.w3.org/1999/02/22-rdf-syntax-ns#subject"][0]["@id"];
-								statement["predicate"] = data[keys[k]]["http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate"][0]["@id"];
-								statement["object"] = data[keys[k]]["http://www.w3.org/1999/02/22-rdf-syntax-ns#object"][0]["@id"];
+							if (data[keys[i]]["http://purl.org/voc/summa/statement"].length > j) {
+								if (data[keys[k]]["@id"] == data[keys[i]]["http://purl.org/voc/summa/statement"][j]["@id"]) {
+									var statement = {
+										"subject" : "",
+										"predicate" : "",
+										"object" : "",
+										"rankValue" : 0.0
+									};
+									statement["subject"] = data[keys[k]]["http://www.w3.org/1999/02/22-rdf-syntax-ns#subject"][0]["@id"];
+									statement["predicate"] = data[keys[k]]["http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate"][0]["@id"];
+									statement["object"] = data[keys[k]]["http://www.w3.org/1999/02/22-rdf-syntax-ns#object"][0]["@id"];
 
-								// var rankNode = data[keys[k]]["http://purl.org/voc/vrank#hasRank"][0]["@id"];
-								//assumption: rankValue object always follows respective content object
-								//otherwise another for and if loop would be necessary
-								statement["rankValue"] = data[keys[k + 1]]["http://purl.org/voc/vrank#rankValue"][0]["@value"];
-								print.statements.push(statement);
+									// var rankNode = data[keys[k]]["http://purl.org/voc/vrank#hasRank"][0]["@id"];
+									//assumption: rankValue object always follows respective content object
+									//otherwise another for and if loop would be necessary
+									statement["rankValue"] = data[keys[k + 1]]["http://purl.org/voc/vrank#rankValue"][0]["@value"];
+									print.statements.push(statement);
+								}
 							}
 						}
 					}

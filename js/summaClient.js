@@ -76,6 +76,9 @@ function summa(uri, topK, language, fixedProperty, id, service) {
 					if (types != null) {
 						print["entity"] = data[keys[i]]["http://purl.org/voc/summa/entity"][0]["@id"];
 						for ( k = 0; k < keys.length; k++) {
+							if (types[0]["value"] == "http://purl.org/voc/summa/Summary") {
+                					   print["entity"] = data[keys[i]]["http://purl.org/voc/summa/entity"][0]["value"];
+                    					}
 							if (data[keys[k]]["@id"] == data[keys[i]]["http://purl.org/voc/summa/statement"][j]["@id"]) {
 								var statement = {
 									"subject" : "",

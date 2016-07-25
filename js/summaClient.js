@@ -74,16 +74,18 @@ function summa(uri, topK, language, fixedProperty, id, service) {
 					if (types != null) {
 						print["entity"] = data[keys[i]]["http://purl.org/voc/summa/entity"][0]["@id"];
 						for ( k = 0; k < keys.length; k++) {
-							if(data[keys[k]]["@id"] == data[keys[i]]["http://purl.org/voc/summa/statement"][j]["@id"]){
-									var statement = {
-									"subject" : "",
-									"predicate" : "",
-									"object" : ""
-								};
-								statement["subject"] = data[keys[k]]["http://www.w3.org/1999/02/22-rdf-syntax-ns#subject"][0]["@id"];
-								statement["predicate"] = data[keys[k]]["http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate"][0]["@id"];
-								statement["object"] = data[keys[k]]["http://www.w3.org/1999/02/22-rdf-syntax-ns#object"][0]["@id"];
-								print.statements.push(statement);
+							if (data[keys[i]]["http://purl.org/voc/summa/statement"].length > j) {
+								if(data[keys[k]]["@id"] == data[keys[i]]["http://purl.org/voc/summa/statement"][j]["@id"]){
+										var statement = {
+										"subject" : "",
+										"predicate" : "",
+										"object" : ""
+									};
+									statement["subject"] = data[keys[k]]["http://www.w3.org/1999/02/22-rdf-syntax-ns#subject"][0]["@id"];
+									statement["predicate"] = data[keys[k]]["http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate"][0]["@id"];
+									statement["object"] = data[keys[k]]["http://www.w3.org/1999/02/22-rdf-syntax-ns#object"][0]["@id"];
+									print.statements.push(statement);
+								}
 							}
 						}
 					}

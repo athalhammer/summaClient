@@ -27,7 +27,7 @@ $(document).ready(function() {
 	// parameters: entity, topK, language, fixed properties, (html) DIV-id, service
 	summa("http://dbpedia.org/resource/Quentin_Tarantino", 5, "en",
 		 "http://dbpedia.org/ontology/director,http://dbpedia.org/ontology/knownFor",
-		 "pf-summary", "http://km.aifb.kit.edu/summa/summarum");
+		 "pf-summary", "http://km.aifb.kit.edu/services/link/sum");
 });
 </script>
 <!-- here is the element that should contain a specific summary -->
@@ -45,7 +45,7 @@ $(document).ready(function() {
 
 	// inline popups for annotated text
 	// parameters: topK, language, fixed properties, service
-	qSUM(5, "en", null, "http://km.aifb.kit.edu/summa/summarum");
+	qSUM(5, "en", null, "http://km.aifb.kit.edu/services/link/sum");
 
 });
 </script>

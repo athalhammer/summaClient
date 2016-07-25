@@ -114,6 +114,7 @@ function summa(uri, topK, language, fixedProperty, id, service) {
 
 function qSUM(topK, lang, fixedproperty, service) {
 	var clicked = false;
+	$("[its-ta-ident-ref]").unbind("mouseover");
 	$("[its-ta-ident-ref]").mouseover(function() {
 		var letter = String.fromCharCode(65 + Math.floor(Math.random() * 26));
 		var identifier = letter + Date.now();

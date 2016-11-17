@@ -74,7 +74,7 @@ qSUM(5, "en", null, "http://km.aifb.kit.edu/services/link/sum");
 });
 
 // DBpedia Spotlight configuration and annotation
-var settings = { "endpoint" : "http://spotlight.sztaki.hu:2222/rest", "its" : "yes",
+var settings = { "endpoint" : "http://www.dbpedia-spotlight.com/en/", "its" : "yes",
 "spotter" : "Default" };
 $(select).annotate(settings); $(select).annotate("best");
 });

@@ -79,6 +79,7 @@ var settings = { "endpoint" : "http://model.dbpedia-spotlight.org/en/", "its" : 
 $(select).annotate(settings); $(select).annotate("best");
 });
 </script>
+<style>span{background-color:#AAAAAA}</style>
 <div class="annotate">Angela Merkel is TIME Person of the Year 2015.</div>
 
 ```

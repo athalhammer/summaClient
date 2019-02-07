@@ -64,21 +64,22 @@ ends with Butch picking up Fabienne with Zed's
 <script src="http://athalhammer.github.io/summaClient/js/summaClient.js"></script>
 <script>
 $(document).ready(function() {
-// selector on HTML element(s)
-var select = ".annotate";
+	// selector on HTML element(s)
+	var select = ".annotate";
 
-// as soon as the annotations are ready, start registering mouseover events
-// parameters: topK, language, fixed properties, service
-$(select).bind("DOMSubtreeModified", function() {
-qSUM(5, "en", null, "http://km.aifb.kit.edu/services/link/sum");
-});
+	// as soon as the annotations are ready, start registering mouseover events
+	// parameters: topK, language, fixed properties, service
+	$(select).bind("DOMSubtreeModified", function() {
+	qSUM(5, "en", null, "http://km.aifb.kit.edu/services/link/sum");
+	});
 
-// DBpedia Spotlight configuration and annotation
-var settings = { "endpoint" : "http://model.dbpedia-spotlight.org/en/", "its" : "yes",
-"spotter" : "Default" };
-$(select).annotate(settings); $(select).annotate("best");
+	// DBpedia Spotlight configuration and annotation
+	var settings = { "endpoint" : "http://model.dbpedia-spotlight.org/en/", "its" : "yes", "spotter" : "Default" };
+	$(select).annotate(settings);
+	$(select).annotate("best");
 });
 </script>
+
 <style>span{background-color:#AAAAAA}</style>
 <div class="annotate">Angela Merkel is TIME Person of the Year 2015.</div>
 
